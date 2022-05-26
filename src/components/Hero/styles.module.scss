@@ -1,0 +1,45 @@
+.container {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/images/background-image.png') no-repeat;
+    height: 58rem;
+    background-size: cover;
+    color: var(--white);
+    padding-top: var(--spacing-huge);
+    @media (max-width: 992px) {
+        background-position: center;
+    }
+}
+
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    max-width: 125.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--spacing-xlarge) / 2);
+    padding-right: calc(var(--spacing-xlarge) / 2);
+    @media (max-width: 1200px) {
+        padding-left: var(--spacing-xlarge);
+        padding-right: var(--spacing-xlarge);
+    }
+    button {
+        max-width: 26.9rem;
+        margin-top: var(--spacing-small);
+    }
+}
+
+.title {
+    font-size: var(--font-size-huge);
+    line-height: calc( var(--font-size-huge) + 1rem);
+    max-width: 50.5rem;
+}
+
+.paragraph {
+    max-width: 40rem;
+    font-size: var(--font-size-medium);
+    line-height: 150%;
+    color: var(--neutral-100);
+    strong {
+        color: var(--white);
+    }
+}
