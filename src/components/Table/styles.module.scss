@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse;
+  td, th {
+    border: 0.2rem solid var(--black);
+    text-align: center;
+  }
+
+  thead {
+    th {
+      padding: var(--spacing-medium);
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-small);
+      line-height: var(--spacing-medium);
+      color: var(--text-light);
+    }
+    background-color: var(--primary-color);
+    :nth-last-child(1n+3) {
+      font-weight: var(--font-weight-regular);
+    }
+  }
+  tbody {
+    td {
+      font-size: var(--font-size-small);
+      padding: var(--spacing-medium);
+      font-weight: var(--font-weight-regular);
+      line-height: var(--spacing-medium);
+    }
+  }
+}
+
+
