@@ -1,11 +1,16 @@
 import 'styles/global.scss'
 
-import { Home } from 'pages/Home'
+import { Header } from 'components/Header'
+import { Hero } from 'components/Hero'
+import { Footer } from 'components/Footer'
 
 export const App = () => {
   return (
     <>
-      <Home />
+      <Header />
+      <Hero />
+
+      <Footer />
     </>
   )
 }
