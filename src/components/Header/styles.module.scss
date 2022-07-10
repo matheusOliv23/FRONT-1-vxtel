@@ -1,14 +1,22 @@
 .header {
+  background: var(--primary-color);
+  padding: var(--spacing-large) 0;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 125rem;
   width: 100%;
-  background: var(--primary-color);
-  height: 8.9rem;
-  padding: 0 8%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--spacing-xlarge) / 2);
+  padding-right: calc(var(--spacing-xlarge) / 2);
 
   h2 {
     color: var(--text-light);
     font: 400 3.6rem var(--font-main);
   }
 }
+
