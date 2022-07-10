@@ -1,11 +1,12 @@
 import 'styles/global.scss'
 
-import { Home } from 'pages/Home'
+import { Base } from 'layout/Base'
+import { Main } from 'pages/Main'
 
 export const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <Base>
+      <Main />
+    </Base>
   )
 }

@@ -26,7 +26,7 @@ export const codeCheck = (origin: string, destiny: string) => {
   const isCodeIncluded = codes.includes(code)
 
   if (isCodeIncluded) {
-    return true
+    return
   } else {
     const message =
       'Os valores digitados não correspondem a um dos nossos planos'
