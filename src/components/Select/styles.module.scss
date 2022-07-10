@@ -4,9 +4,9 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+
   select {
     font-size: var(--font-size-medium);
-    color: var(--neutral-300);
     line-height: var(--font-size-xlarge);
     border: none;
     width: 100%;
@@ -14,11 +14,12 @@
     border-radius: 0.4rem;
     padding: var(--spacing-medium) var(--spacing-large) var(--spacing-medium) var(--spacing-large);
     appearance: none;
+
     &:focus {
       outline: 1px solid var(--neutral-600);
     }
   }
-  
+
   label {
     color: var(--neutral-600);
     font-size: var(--font-size-large);
@@ -35,6 +36,7 @@
     height: 100%;
     pointer-events: none;
   }
+
   .arrow:before {
     content: "";
     position: absolute;
@@ -44,6 +46,7 @@
     left: 50%;
     transform: translate(-50%, -50%)
   }
+
   .arrow:before {
     border-left: 0.5em solid transparent;
     border-right: 0.5em solid transparent;
