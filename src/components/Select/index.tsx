@@ -15,12 +15,12 @@ export const Select = ({ options, name, labelName, ...rest }: IOptions) => {
   return (
     <div className={styles.container}>
       <label htmlFor={name}>{labelName}</label>
-      <select name={name} defaultValue="" {...rest}>
+      <select name={name} {...rest}>
         <option value="" disabled hidden>
           Selecione seu plano
         </option>
-        {options.map((options) => (
-          <option key={options.value} value={options.value}>
+        {options.map((options, index) => (
+          <option key={index} value={options.value}>
             {options.label}
           </option>
         ))}
