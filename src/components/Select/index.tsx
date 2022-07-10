@@ -11,7 +11,7 @@ interface IOptions extends SelectHTMLAttributes<HTMLSelectElement> {
   labelName: string
 }
 
-const Select = ({ options, name, labelName, ...rest }: IOptions) => {
+export const Select = ({ options, name, labelName, ...rest }: IOptions) => {
   return (
     <div className={styles.container}>
       <label htmlFor={name}>{labelName}</label>
@@ -29,5 +29,3 @@ const Select = ({ options, name, labelName, ...rest }: IOptions) => {
     </div>
   )
 }
-
-export default Select
