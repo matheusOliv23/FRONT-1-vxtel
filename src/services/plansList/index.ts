@@ -1,4 +1,5 @@
 import { plansByLocale } from './plansByLocale'
+import { checkZeroIncluded } from 'utils/codeCheck'
 
 export const plansList = (
   dddOrigin: string,
@@ -6,14 +7,18 @@ export const plansList = (
   qtdMinutes: number,
   typePlan: number,
 ) => {
+  const [originFormatted, destinyFormatted] = checkZeroIncluded([
+    dddOrigin,
+    dddDest,
+  ])
   let finalValueWithPlan = 0
   let finalValueWithoutPlan = 0
 
   const { valueWithPlan, valueWithoutPlan } = plansByLocale(
     qtdMinutes,
     typePlan,
-    dddOrigin,
-    dddDest,
+    originFormatted,
+    destinyFormatted,
   )
 
   finalValueWithPlan = valueWithPlan

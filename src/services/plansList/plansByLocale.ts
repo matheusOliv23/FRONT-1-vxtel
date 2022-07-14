@@ -8,7 +8,6 @@ export const plansByLocale = (
   let valueWithoutPlan = 0
   const valuePerMinute = [1.9, 2.9, 1.7, 2.7, 0.9, 1.9]
 
-  //abstrair essa função
   const calculatePlanValue = (
     qtdMinutes: number,
     typePlan: number,
