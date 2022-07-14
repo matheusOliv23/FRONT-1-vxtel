@@ -19,7 +19,11 @@
   position: relative;
   min-height: 280px;
   
-
+  @media (max-width: 768px) {
+    &:hover {
+      transform: none !important; 
+    }
+  }
   &:hover {
     transform: scale(1.05);
   }
