@@ -16,7 +16,14 @@
   max-width: 39.7rem;
   transition: transform 0.3s ease-in-out;
   width: 100%;
-
+  position: relative;
+  min-height: 280px;
+  
+  @media (max-width: 768px) {
+    &:hover {
+      transform: none !important; 
+    }
+  }
   &:hover {
     transform: scale(1.05);
   }
@@ -29,6 +36,8 @@
 
   button {
     margin: 0 0 var(--spacing-large) var(--spacing-medium);
+    position: absolute;
+    bottom: 0;
   }
 }
 

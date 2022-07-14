@@ -15,6 +15,10 @@
   > span {
     color: var(--text-light);
     font: 500 1.6rem 'Roboto', sans-serif;
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 

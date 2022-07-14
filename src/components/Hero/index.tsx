@@ -11,9 +11,11 @@ export const Hero = () => {
           Tenha minutos todos os dias para falar com quem quiser por nossa
           conta, você só paga os minutos excedentes do seu plano.
         </p>
-        <Button variant="primary" size="fullWidth">
-          Saiba mais
-        </Button>
+        <a href="#plans">
+          <Button variant="primary" size="fullWidth">
+            Saiba mais
+          </Button>
+        </a>
       </div>
     </div>
   )

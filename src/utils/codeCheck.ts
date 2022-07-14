@@ -1,10 +1,9 @@
-function checkZeroIncluded(values: string[]) {
+export const checkZeroIncluded = (values: string[]) => {
   const value = values.map((value) => {
     const isZeroIncluded = value.includes('0')
 
     if (!isZeroIncluded) {
       const formattedValue = `0${value}`
-
       return formattedValue
     }
 
@@ -23,10 +22,11 @@ export const codeCheck = (origin: string, destiny: string) => {
   ])
 
   const code = originFormatted + destinyFormatted
+
   const isCodeIncluded = codes.includes(code)
 
   if (isCodeIncluded) {
-    return true
+    return
   } else {
     const message =
       'Os valores digitados não correspondem a um dos nossos planos'

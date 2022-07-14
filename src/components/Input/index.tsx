@@ -3,14 +3,13 @@ import { InputHTMLAttributes } from 'react'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   labelName: string
-  onChange: () => void
 }
 
-export const Input = ({ name, labelName, onChange, ...rest }: InputProps) => {
+export const Input = ({ name, labelName, ...rest }: InputProps) => {
   return (
     <div className={styles.container}>
       <label htmlFor={name}>{labelName}</label>
-      <input name={name} onChange={onChange} {...rest} />
+      <input name={name} {...rest} />
     </div>
   )
 }

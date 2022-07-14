@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+    }
+
+    > svg {
+      color: var(--neutral-400);
+      animation: rotate 2s linear infinite;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+
+}
