@@ -17,10 +17,10 @@ import { codeCheck } from 'utils/codeCheck'
 import styles from './styles.module.scss'
 
 const initialValue = {
-  origem: '',
-  destino: '',
-  tempo: 1,
-  plano: '',
+  origin: '',
+  destiny: '',
+  time: 1,
+  plan: '',
 }
 
 export const Main = () => {
@@ -36,9 +36,9 @@ export const Main = () => {
   function handleSubmitForm(event: FormEvent) {
     event.preventDefault()
 
-    const { origem, destino, tempo, plano } = formValues
+    const { origin, destiny, time, plan } = formValues
 
-    const message = codeCheck(origem, destino)
+    const message = codeCheck(origin, destiny)
 
     if (message) {
       setError(message)
@@ -46,17 +46,17 @@ export const Main = () => {
     }
 
     const { finalValueWithPlan, finalValueWithoutPlan } = plansList(
-      origem,
-      destino,
-      tempo,
-      Number(plano),
+      origin,
+      destiny,
+      time,
+      Number(plan),
     )
 
     setTableContent([
-      origem,
-      destino,
-      String(tempo),
-      plano,
+      origin,
+      destiny,
+      String(time),
+      plan,
       String(formatPrice(finalValueWithPlan)),
       String(formatPrice(finalValueWithoutPlan)),
     ])
@@ -91,8 +91,8 @@ export const Main = () => {
         <form onSubmit={handleSubmitForm}>
           <div className={setClass(['container', 'formWrapper'], styles)}>
             <Input
-              value={formValues.origem}
-              name="origem"
+              value={formValues.origin}
+              name="origin"
               labelName="Origem"
               placeholder="DDD de origem"
               onChange={(event) =>
@@ -100,8 +100,8 @@ export const Main = () => {
               }
             />
             <Input
-              value={formValues.destino}
-              name="destino"
+              value={formValues.destiny}
+              name="destiny"
               labelName="Destino"
               placeholder="DDD de destino"
               onChange={(event) =>
@@ -109,8 +109,8 @@ export const Main = () => {
               }
             />
             <Input
-              value={formValues.tempo}
-              name="tempo"
+              value={formValues.time}
+              name="time"
               type="number"
               labelName="Tempo"
               placeholder="Tempo em minutos"
@@ -119,8 +119,8 @@ export const Main = () => {
               }
             />
             <Select
-              value={formValues.plano}
-              name="plano"
+              value={formValues.plan}
+              name="plan"
               labelName="Plano FaleMais"
               options={SelectOptions}
               onChange={(event) =>
