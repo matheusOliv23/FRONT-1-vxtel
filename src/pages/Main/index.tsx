@@ -15,6 +15,7 @@ import { formatPrice } from 'utils/formatPrice'
 import { codeCheck } from 'utils/codeCheck'
 
 import styles from './styles.module.scss'
+import { Loading } from 'components/Loading'
 
 const initialValue = {
   origin: '',
@@ -28,6 +29,7 @@ export const Main = () => {
   const [formValues, setFormValues] = useState(initialValue)
   const [tableContent, setTableContent] = useState<string[]>([])
   const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   function handleChangeValue(name: string, value: string) {
     setFormValues({ ...formValues, [name]: value })
@@ -35,6 +37,8 @@ export const Main = () => {
 
   function handleSubmitForm(event: FormEvent) {
     event.preventDefault()
+
+    setIsLoading(true)
 
     const { origin, destiny, time, plan } = formValues
 
@@ -61,7 +65,10 @@ export const Main = () => {
       String(formatPrice(finalValueWithoutPlan)),
     ])
 
-    setIsShowTable(true)
+    setTimeout(() => {
+      setIsLoading(false)
+      setIsShowTable(true)
+    }, 3000)
   }
 
   function handleBackForm() {
@@ -135,7 +142,8 @@ export const Main = () => {
             )}
 
             <Button type="submit" size="fullWidth">
-              Calcular
+              {isLoading ? 'Calculando' : 'Calcular'}
+              {isLoading && <Loading />}
             </Button>
           </div>
         </form>
