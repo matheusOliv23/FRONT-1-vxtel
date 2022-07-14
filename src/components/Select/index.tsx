@@ -15,7 +15,7 @@ export const Select = ({ options, name, labelName, ...rest }: IOptions) => {
   return (
     <div className={styles.container}>
       <label htmlFor={name}>{labelName}</label>
-      <select name={name} {...rest}>
+      <select required name={name} {...rest}>
         <option value="" disabled hidden>
           Selecione seu plano
         </option>
